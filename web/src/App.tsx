@@ -8,7 +8,7 @@ interface repositorie {
 
 function App() {
   const [repositories, setRepositories] = useState<repositorie[]>([]);
-  const [countFavorites, setCountFavorites] = useState(0);
+  const [countFavorites, setCountFavorities] = useState(0);
 
   async function handleApiGitHub() {
     const response = await fetch(
@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const reposFavorites = repositories.filter((repo) => repo.favorite);
 
-    setCountFavorites(reposFavorites.length);
+    setCountFavorities(reposFavorites.length);
   }, [repositories]);
 
   useEffect(() => {

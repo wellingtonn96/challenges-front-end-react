@@ -24,21 +24,7 @@ function Dogs() {
     localStorage.getItem("fontName") || ""
   );
 
-  useEffect(() => {
-    axios("https://dog.ceo/api/breeds/list/all").then((response) => {
-      const results = Object.keys(response.data.message);
-
-      const list: item[] = [];
-
-      results.map((item) =>
-        list.push({ id: String(Math.random()), name: item })
-      );
-
-      setBreeds(list);
-    });
-  }, []);
-
-  function handleSelecteBreed(event: ChangeEvent<HTMLSelectElement>) {
+  function handleSelectedBreed(event: ChangeEvent<HTMLSelectElement>) {
     const result = event.target.value;
 
     setSelectedBreed(result);
@@ -72,6 +58,20 @@ function Dogs() {
   }
 
   useEffect(() => {
+    axios("https://dog.ceo/api/breeds/list/all").then((response) => {
+      const results = Object.keys(response.data.message);
+
+      const list: item[] = [];
+
+      results.map((item) =>
+        list.push({ id: String(Math.random()), name: item })
+      );
+
+      setBreeds(list);
+    });
+  }, []);
+
+  useEffect(() => {
     axios(`https://dog.ceo/api/breed/${selectedBreed}/images/random`).then(
       (results) => {
         setUrlImageBreed(results.data.message);
@@ -86,61 +86,72 @@ function Dogs() {
       </header>
       <main className="main">
         <form>
-          <label htmlFor="">Raças</label>
-          <select onChange={handleSelecteBreed}>
-            <option value="">Selecione uma raça</option>
-            {breeds.map((item) => (
-              <option key={item.id} value={item.name}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          <hr />
-          <label htmlFor="">Nome</label>
-          <input
-            type="text"
-            placeholder="digite o nome do cachorro"
-            onChange={handleNameOfTheDog}
-          />
-          <hr />
-          <label htmlFor="">Cor</label>
-          <select onChange={handleColorNameBreed}>
-            <option value="">Selecione uma cor</option>
-            <option value="green">green</option>
-            <option value="red">red</option>
-            <option value="blue">blue</option>
-            <option value="yellow">yellow</option>
-            <option value="purple">purple</option>
-          </select>
-          <hr />
-          <label htmlFor="">Fonte</label>
-          <select onChange={handleSelectedFont}>
-            <option value="">Selecione uma Fonte</option>
-            <option value="'Montserrat', sans-serif">Montserrat</option>
-            <option value="'Open Sans Condensed', sans-serif">
-              Open Sans Condensed
-            </option>
-            <option value="'Poppins', sans-serif">'Poppins</option>
-            <option value="'Roboto', sans-serif">Roboto</option>
-            <option value="'Roboto Mono', monospace">Roboto Mono</option>
-          </select>
-          <hr />
+          <fieldset>
+            <legend>
+              <h2>Dados</h2>
+            </legend>
+
+            <div className="field">
+              <label htmlFor="">Raças</label>
+              <select onChange={handleSelectedBreed}>
+                <option value="#">Selecione uma raça</option>
+                {breeds.map((item) => (
+                  <option key={item.id} value={item.name}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="field">
+              <label htmlFor="">Nome</label>
+              <input
+                type="text"
+                placeholder="digite o nome do cachorro"
+                onChange={handleNameOfTheDog}
+              />
+            </div>
+            <div className="field-group">
+              <div className="field">
+                <label htmlFor="">Cor</label>
+                <select onChange={handleColorNameBreed}>
+                  <option value="#">Selecione uma cor</option>
+                  <option value="green">green</option>
+                  <option value="red">red</option>
+                  <option value="blue">blue</option>
+                  <option value="yellow">yellow</option>
+                  <option value="purple">purple</option>
+                </select>
+              </div>
+
+              <div className="field">
+                <label htmlFor="">Fonte</label>
+                <select onChange={handleSelectedFont}>
+                  <option value="">Selecione uma Fonte</option>
+                  <option value="'Montserrat', sans-serif">Montserrat</option>
+                  <option value="'Open Sans Condensed', sans-serif">
+                    Open Sans Condensed
+                  </option>
+                  <option value="'Poppins', sans-serif">Poppins</option>
+                  <option value="'Roboto', sans-serif">Roboto</option>
+                  <option value="'Roboto Mono', monospace">Roboto Mono</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
           <div>
-            <p
+            <h2
               style={{
-                fontSize: 20,
                 fontFamily: fontName,
                 color: colorName,
               }}
             >
               {nameOfTheDog}
-            </p>
-            <img
-              src={urlImageBreed}
-              alt="breed image"
-              style={{ height: 400 }}
-            />
+            </h2>
+            {urlImageBreed && <img src={urlImageBreed} alt="the breed" />}
           </div>
+
           <button type="button" onClick={handleSaveLocalStorage}>
             Salvar
           </button>
