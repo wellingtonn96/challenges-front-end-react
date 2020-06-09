@@ -1,64 +1,71 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-interface repositorie {
-  id: string;
-  name: string;
-  favorite: boolean;
+import Form from "./src/pages/Form";
+export default function App() {
+  return <Form />;
 }
 
-function App() {
-  const [repositories, setRepositories] = useState<repositorie[]>([]);
-  const [countFavorites, setCountFavorities] = useState(0);
+// import React, { useState, useEffect } from "react";
 
-  async function handleApiGitHub() {
-    const response = await fetch(
-      "http://api.github.com/users/wellingtonn96/repos"
-    );
-    const data = await response.json();
+// interface repositorie {
+//   id: string;
+//   name: string;
+//   favorite: boolean;
+// }
 
-    return data;
-  }
+// function App() {
+//   const [repositories, setRepositories] = useState<repositorie[]>([]);
+//   const [countFavorites, setCountFavorities] = useState(0);
 
-  function handlefaforite(id: string) {
-    const newRepositories = repositories.map((repo) => {
-      return repo.id === id ? { ...repo, favorite: !repo.favorite } : repo;
-    });
+//   async function handleApiGitHub() {
+//     const response = await fetch(
+//       "http://api.github.com/users/wellingtonn96/repos"
+//     );
+//     const data = await response.json();
 
-    setRepositories(newRepositories);
-  }
+//     return data;
+//   }
 
-  useEffect(() => {
-    const reposFavorites = repositories.filter((repo) => repo.favorite);
+//   function handlefaforite(id: string) {
+//     const newRepositories = repositories.map((repo) => {
+//       return repo.id === id ? { ...repo, favorite: !repo.favorite } : repo;
+//     });
 
-    setCountFavorities(reposFavorites.length);
-  }, [repositories]);
+//     setRepositories(newRepositories);
+//   }
 
-  useEffect(() => {
-    handleApiGitHub().then((response) => {
-      setRepositories(response);
-    });
-  }, []);
+//   useEffect(() => {
+//     const reposFavorites = repositories.filter((repo) => repo.favorite);
 
-  return (
-    <div>
-      <p>
-        {countFavorites > 0
-          ? `você tem ${countFavorites} repositorios favorito(s)`
-          : "você não tem nenhum repositorio favorito"}
-      </p>
-      <ul>
-        {repositories.map((item) => (
-          <li key={item.id}>
-            {item.name} =>
-            {item.favorite && <span style={{ color: "green" }}>Favorito</span>}
-            <button type="button" onClick={() => handlefaforite(item.id)}>
-              favoritar
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+//     setCountFavorities(reposFavorites.length);
+//   }, [repositories]);
 
-export default App;
+//   useEffect(() => {
+//     handleApiGitHub().then((response) => {
+//       setRepositories(response);
+//     });
+//   }, []);
+
+//   return (
+//     <div>
+//       <p>
+//         {countFavorites > 0
+//           ? `você tem ${countFavorites} repositorios favorito(s)`
+//           : "você não tem nenhum repositorio favorito"}
+//       </p>
+//       <ul>
+//         {repositories.map((item) => (
+//           <li key={item.id}>
+//             {item.name} =>
+//             {item.favorite && <span style={{ color: "green" }}>Favorito</span>}
+//             <button type="button" onClick={() => handlefaforite(item.id)}>
+//               favoritar
+//             </button>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default App;
