@@ -116,11 +116,11 @@ function Dogs() {
                 <label htmlFor="">Cor</label>
                 <select onChange={handleColorNameBreed}>
                   <option value="#">Selecione uma cor</option>
-                  <option value="green">green</option>
-                  <option value="red">red</option>
-                  <option value="blue">blue</option>
-                  <option value="yellow">yellow</option>
-                  <option value="purple">purple</option>
+                  <option value="green">verde</option>
+                  <option value="red">vermelho</option>
+                  <option value="blue">azul</option>
+                  <option value="yellow">amarelo</option>
+                  <option value="purple">roxo</option>
                 </select>
               </div>
 
