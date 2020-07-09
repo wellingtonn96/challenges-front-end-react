@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Crimson+Text|Noto+Sans+JP|Roboto&display=swap');
+
+body {
+    background: #ebebeb;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, p, hr {
+    margin: 10px;
+}
+
+img {
+    width: 120px;
+    height: 60px;
+    margin-left: 10px
+}
+
+@media(min-width: 760px) {
+    img {
+        width: 140px;
+        height: 70px;
+    }
+}
+
+i {
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white
+}
+
+h1 {
+    font-size: 40px;
+}
+
+input, select{
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 18px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: 'Abel', sans-serif;
+}
+
+label {
+    font-size: 18px;
+}
+
+button {
+    border-radius: 4px;
+    border: none;
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
+table {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+table td, th {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+.header {
+    width: 100%;
+    height: 65px;
+    background-color: #ffffff;
+    box-shadow: 3px 7px 12px #999999;
+}
+
+
+@media(min-width: 760px) {
+    .header {
+        height: 75px;
+        position: fixed;
+    }
+
+    .main-content {
+        display: flex;
+    }
+}
+
+.nav {
+   width: 100%;
+   background: #4b4b4b;
+   text-align: center;
+}
+
+@media(min-width: 760px) {
+    .nav {
+        width: 15%;
+        position: fixed;
+        margin-top: 75px;
+        height: calc(100vh - 75px);
+        text-align: left
+    }
+}
+
+
+.nav li {
+    list-style: none;
+    padding: 10px;
+}
+
+.nav a:hover {
+    color: gray;
+}
+
+.content {
+    max-width: 100%;
+    height: calc(100vh - 75px);
+}
+
+@media(min-width: 760px) {
+    .content {
+        width: 85%;
+        margin-left: 15%;
+        margin-top: 75px
+    }
+}
+
+.card-content {
+    max-width: 100%;
+    background-color: white;
+    padding: 40px;
+    margin: 15px;
+    box-shadow: 3px 7px 12px #999999;
+}
+
+.form-row {
+    max-width: 100%;
+}
+
+
+.input-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media(min-width: 760px) {
+    .input-container{
+        width: 50%;
+    }
+}
+
+.footer {
+    background: white;  
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    bottom: 0
+}

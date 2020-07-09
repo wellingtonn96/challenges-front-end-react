@@ -1,0 +1,62 @@
+body {
+    background: #eee
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans Condensed', sans-serif
+}
+
+
+h1 {
+    font-weight: 100;
+    font-size: 40px 
+}
+
+.header {
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px
+}
+
+.display {
+    text-align: center;
+    padding: 30px;
+}
+
+.display i{
+    font-size: 30px;
+    color: #222
+}
+
+.display button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+.painel {
+    width: 250px;
+    height: 250px;
+    background: #222;
+    border-radius: 50%;
+    border: 10px solid #333;
+    padding-top:80px;
+    text-align: center;
+    margin: 0 auto;
+    color: aqua
+}
+
+.hour {
+    font-size: 40px;
+    font-weight: 900
+}
+
+.date {
+    font-size: 15px;
+}
