@@ -1,4 +1,4 @@
-Link to open the project online (https://clock-react.netlify.app).
+## Link to open the project online (https://clock-react.netlify.app).
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
