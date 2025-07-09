@@ -1,70 +1,149 @@
-## Link to open the project on netlify https://timer-react-app.netlify.app
+# ⏱️ React Timer - Cronômetro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um cronômetro funcional desenvolvido em React com controles de play, pause e reset.
 
-## Available Scripts
+## ✨ Funcionalidades
 
-In the project directory, you can run:
+- **Timer Funcional**: Cronômetro com precisão de segundos
+- **Controles Intuitivos**: Botões play, pause e reset
+- **Interface Responsiva**: Design adaptável para diferentes dispositivos
+- **Componentes Modulares**: Estrutura organizada e reutilizável
+- **Input Personalizado**: Possibilidade de definir tempo inicial
+
+## 🛠️ Tecnologias Utilizadas
+
+- **React** - Biblioteca principal
+- **JavaScript (ES6+)** - Linguagem de programação
+- **CSS** - Estilização
+- **Create React App** - Ferramenta de configuração
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── App.js              # Componente principal
+│   ├── Header.js           # Cabeçalho da aplicação
+│   └── Timer/
+│       ├── Timer.js        # Componente principal do timer
+│       ├── Display.js      # Exibição do tempo
+│       ├── Button.js       # Botões de controle
+│       └── InputTimer.js   # Input para definir tempo
+├── lib/
+│   └── Time.js            # Utilitários de tempo
+├── index.js               # Ponto de entrada
+└── index.css              # Estilos globais
+```
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Node.js (versão 14 ou superior)
+- npm ou yarn
+
+### Instalação
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/challenges-front-end-react.git
+   cd challenges-front-end-react/challenge-react-timer
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. **Execute o projeto:**
+   ```bash
+   npm start
+   # ou
+   yarn start
+   ```
+
+4. **Abra no navegador:**
+   Acesse [http://localhost:3000](http://localhost:3000)
+
+## 📱 Demonstração Online
+
+🔗 **Link de Produção:** [https://timer-react-app.netlify.app](https://timer-react-app.netlify.app)
+
+## 🎯 Funcionalidades Principais
+
+### Componente Timer
+- Gerencia o estado do cronômetro
+- Controla play, pause e reset
+- Atualiza o display em tempo real
+
+### Componente Display
+- Exibe o tempo formatado (MM:SS)
+- Estilização responsiva
+- Animações suaves
+
+### Componente Button
+- Botões de controle (Play/Pause, Reset)
+- Estados visuais diferentes
+- Feedback tátil
+
+### Componente InputTimer
+- Input para definir tempo inicial
+- Validação de entrada
+- Formatação automática
+
+## 🔧 Scripts Disponíveis
 
 ### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Executa o app em modo de desenvolvimento.
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Executa os testes em modo interativo.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Cria a build de produção na pasta `build`.
 
 ### `npm run eject`
+**⚠️ Operação irreversível!**
+Remove a dependência única de build do projeto.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📚 Aprendizados
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este projeto demonstra:
+- **Estado React**: Gerenciamento de estado complexo
+- **Event Handlers**: Manipulação de eventos
+- **setInterval/clearInterval**: Controle de tempo
+- **Componentes Filhos**: Comunicação entre componentes
+- **Formatação de Tempo**: Conversão de segundos para MM:SS
+- **CSS Flexbox**: Layout responsivo
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🎮 Como Usar
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Definir Tempo**: Use o input para definir o tempo inicial
+2. **Iniciar**: Clique em "Start" para começar a contagem
+3. **Pausar**: Clique em "Pause" para pausar o timer
+4. **Resetar**: Clique em "Reset" para zerar o cronômetro
 
-## Learn More
+## 🤝 Contribuições
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contribuições são bem-vindas! Sinta-se à vontade para:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Reportar bugs
+- Sugerir melhorias
+- Enviar pull requests
+- Melhorar a documentação
 
-### Code Splitting
+## 📄 Licença
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Este projeto está sob a licença MIT.
 
-### Analyzing the Bundle Size
+## 👨‍💻 Autor
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+**Wellington Silva**
+- GitHub: [@wellingtonn96](https://github.com/wellingtonn96)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+⭐ **Se este projeto foi útil, considere dar uma estrela!**

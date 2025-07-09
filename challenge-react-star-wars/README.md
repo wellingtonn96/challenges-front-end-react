@@ -1,68 +1,147 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ⭐ Star Wars React
 
-## Available Scripts
+Aplicação temática do universo Star Wars desenvolvida em React.
 
-In the project directory, you can run:
+## ✨ Funcionalidades
+
+- **Tema Star Wars**: Interface inspirada no universo Star Wars
+- **Design Responsivo**: Layout adaptável para diferentes dispositivos
+- **Componentes Temáticos**: Elementos visuais do Star Wars
+- **Interface Intuitiva**: Navegação simples e elegante
+- **Assets Personalizados**: Imagens e recursos temáticos
+
+## 🛠️ Tecnologias Utilizadas
+
+- **React** - Biblioteca principal
+- **JavaScript (ES6+)** - Linguagem de programação
+- **CSS** - Estilização
+- **Create React App** - Ferramenta de configuração
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── App.js              # Componente principal
+├── App.css             # Estilos do componente principal
+├── App.test.js         # Testes
+├── assets/
+│   └── logosw.png      # Logo do Star Wars
+├── index.js            # Ponto de entrada
+├── index.css           # Estilos globais
+└── serviceWorker.js    # Service Worker
+```
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Node.js (versão 14 ou superior)
+- npm ou yarn
+
+### Instalação
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/challenges-front-end-react.git
+   cd challenges-front-end-react/challenge-react-star-wars
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. **Execute o projeto:**
+   ```bash
+   npm start
+   # ou
+   yarn start
+   ```
+
+4. **Abra no navegador:**
+   Acesse [http://localhost:3000](http://localhost:3000)
+
+## 📱 Demonstração Online
+
+🔗 **Link de Produção:** [https://star-wars-react.vercel.app](https://star-wars-react.vercel.app)
+
+## 🎯 Funcionalidades Principais
+
+### Design Temático
+- Interface inspirada no universo Star Wars
+- Cores e elementos característicos da saga
+- Logo oficial do Star Wars
+
+### Componentes React
+- Estrutura modular e reutilizável
+- Componentes funcionais
+- Props e state management
+
+### Responsividade
+- Layout adaptável para mobile
+- CSS flexbox e grid
+- Design responsivo
+
+## 🔧 Scripts Disponíveis
 
 ### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Executa o app em modo de desenvolvimento.
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Executa os testes em modo interativo.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Cria a build de produção na pasta `build`.
 
 ### `npm run eject`
+**⚠️ Operação irreversível!**
+Remove a dependência única de build do projeto.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📚 Aprendizados
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este projeto demonstra:
+- **Componentes React**: Estruturação modular
+- **CSS Temático**: Design inspirado em franquia
+- **Assets Management**: Gerenciamento de imagens
+- **Responsive Design**: Layout adaptável
+- **Props e State**: Gerenciamento de dados
+- **Create React App**: Configuração de projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🎮 Como Usar
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Navegar**: Explore a interface temática do Star Wars
+2. **Interagir**: Teste os elementos interativos
+3. **Responsivo**: Teste em diferentes tamanhos de tela
 
-## Learn More
+## 🔮 Melhorias Futuras
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Integração com API do Star Wars
+- Lista de personagens
+- Informações sobre planetas
+- Trilha sonora temática
+- Animações de transição
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Contribuições
 
-### Code Splitting
+Contribuições são bem-vindas! Sinta-se à vontade para:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Reportar bugs
+- Sugerir melhorias
+- Enviar pull requests
+- Melhorar a documentação
 
-### Analyzing the Bundle Size
+## 📄 Licença
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Este projeto está sob a licença MIT.
 
-### Making a Progressive Web App
+## 👨‍💻 Autor
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+**Wellington Silva**
+- GitHub: [@wellingtonn96](https://github.com/wellingtonn96)
 
-### Advanced Configuration
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+⭐ **Que a força esteja com você!**
